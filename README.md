@@ -11,7 +11,7 @@ Para renovar un certificado se debe ejecutar el siguiente comando:
 docker run -it --name letsencrypt -v `pwd`/letsencrypt:/etc/letsencrypt jarfernandez/letsencrypt ./certbot-auto renew
 ```
 
-Los certificados se guardarán en el directorio **letsencrypt/live/<www.midominio.com>**
+Los certificados se guardarán en el directorio `letsencrypt/live/<www.midominio.com>`
 
 ---
 

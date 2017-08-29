@@ -1,12 +1,12 @@
-FROM ubuntu
+FROM ubuntu:xenial
 
-MAINTAINER Jose Arturo Fernandez Diaz jarfernandez@gmail.com
+MAINTAINER Jose Arturo Fernandez Diaz <jarfernandez@gmail.com>
 
 # Instala wget, descarga certbot-auto y establece permisos de ejecucion
-RUN apt-get update && apt-get install -y wget \
-    && cd /etc && wget https://dl.eff.org/certbot-auto \
+RUN apt-get update \
+    && apt-get install -y wget \
+    && cd /etc \
+    && wget https://dl.eff.org/certbot-auto \
     && chmod a+x certbot-auto
-    
-VOLUME /etc/letsencrypt
 
 WORKDIR /etc
